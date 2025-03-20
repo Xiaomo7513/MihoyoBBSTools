@@ -24,7 +24,6 @@ mihoyobbs:
   checkin: true
   #签到的社区列表 详情可以看config文件夹下面的readme
   checkin_list:
-    - 5
     - 2
   #看帖
   read: true
@@ -33,7 +32,7 @@ mihoyobbs:
   #取消点赞
   cancel_like: true
   #分享帖子
-  share: true
+  share: false
 # 游戏签到
 games:
   #国服控制区域
