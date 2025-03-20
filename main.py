@@ -18,14 +18,19 @@ from loghelper import log
 
 def main():
     # 拒绝在GitHub Action运行
-    if os.getenv('GITHUB_ACTIONS') == 'true':
-        print("请不要在GitHub Action运行本项目")
-        exit(0)
+    # if os.getenv('GITHUB_ACTIONS') == 'true':
+    #     print("请不要在GitHub Action运行本项目")
+    #     exit(0)
     # 初始化，加载配置
     config.load_config()
     if not config.config["enable"]:
         log.warning("Config未启用！")
         return 1, "Config未启用！"
+    
+    # 引入 secrets
+    config.config['account']['cookie'] = os.getenv('COOKIE')
+    config.config['account']['stoken'] = os.getenv('STOKEN')
+
     # 检测参数是否齐全，如果缺少就进行登入操作
     if any([config.config["account"]["stuid"] == "", config.config["account"]["stoken"] == "",
             login.require_mid() and config.config["account"]["mid"] == ""]):
