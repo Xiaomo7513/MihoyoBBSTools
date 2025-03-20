@@ -28,8 +28,8 @@ def main():
         return 1, "Config未启用！"
     
     # 引入 secrets
-    config.config['account']['cookie'] = os.getenv('COOKIE')
-    config.config['account']['stoken'] = os.getenv('STOKEN')
+    config.config['account']['cookie'] = os.getenv('cookie')
+    config.config['account']['stoken'] = os.getenv('stoken')
 
     # 检测参数是否齐全，如果缺少就进行登入操作
     if any([config.config["account"]["stuid"] == "", config.config["account"]["stoken"] == "",
