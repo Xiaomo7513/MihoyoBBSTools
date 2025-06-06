@@ -25,6 +25,7 @@ mihoyobbs:
   #签到的社区列表 详情可以看config文件夹下面的readme
   checkin_list:
     - 2
+    - 6
   #看帖
   read: true
   #点赞帖子
@@ -63,7 +64,7 @@ games:
       black_list: []
     # 崩坏: 星穹铁道
     honkai_sr:
-      checkin: false
+      checkin: true
       black_list: []
     #绝区零
     zzz:
