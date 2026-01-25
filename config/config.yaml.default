@@ -18,7 +18,7 @@ device:
   # 手动获取
   fp: ""
 mihoyobbs:
-  #控制bbs功能是否启用
+  #控制bbs功能是否启用;
   enable: false
   #社区签到
   checkin: true
